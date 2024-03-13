@@ -16,10 +16,18 @@ public class DetailUserResponseStaff {
 
     private String name;
 
+    private String userCode;
+
     private String userName;
 
-    private String email;
+    private String emailFE;
+
+    private String emailFPT;
 
     private String picture;
+
+    private String userSubjectCode;
+
+    private String userTrainingFacilityCode;
 
 }

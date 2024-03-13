@@ -71,8 +71,11 @@ public class ConnectorServiceImpl implements ConnectorService {
                 detailUserResponseStaff.setId(staff.getStaffCode());
                 detailUserResponseStaff.setName(staff.getFullName());
                 detailUserResponseStaff.setUserName(staff.getStaffCode());
-                detailUserResponseStaff.setEmail(staff.getAccountFPT());
-//                detailUserResponseStaff.setEmailFE(staff.getAccountFE());
+                detailUserResponseStaff.setEmailFPT(staff.getAccountFPT());
+                detailUserResponseStaff.setEmailFE(staff.getAccountFE());
+                detailUserResponseStaff.setUserSubjectCode(staff.getDepartmentCampus().getDepartment().getMa());
+                detailUserResponseStaff.setUserTrainingFacilityCode(staff.getDepartmentCampus().getCampus().getMa());
+                detailUserResponseStaff.setUserCode(staff.getStaffCode());
                 detailUserResponseStaff.setPicture(staff.getAvatar());
                 listDetailUserResponseStaff.add(detailUserResponseStaff);
             }
@@ -91,8 +94,8 @@ public class ConnectorServiceImpl implements ConnectorService {
             detailUserResponseStaff.setId(staff.getStaffCode());
             detailUserResponseStaff.setName(staff.getFullName());
             detailUserResponseStaff.setUserName(staff.getStaffCode());
-            detailUserResponseStaff.setEmail(staff.getAccountFPT());
-//            detailUserResponseStaff.setEmailFE(staff.getAccountFE());
+            detailUserResponseStaff.setEmailFPT(staff.getAccountFPT());
+            detailUserResponseStaff.setEmailFE(staff.getAccountFE());
             detailUserResponseStaff.setPicture(staff.getAvatar());
             listDetailUserResponseStaff.add(detailUserResponseStaff);
         }
@@ -119,8 +122,8 @@ public class ConnectorServiceImpl implements ConnectorService {
             detailUserResponseStaff.setId(staff.getStaffCode());
             detailUserResponseStaff.setName(staff.getFullName());
             detailUserResponseStaff.setUserName(staff.getStaffCode());
-            detailUserResponseStaff.setEmail(staff.getAccountFPT());
-//            detailUserResponseStaff.setEmailFE(staff.getAccountFE());
+            detailUserResponseStaff.setEmailFPT(staff.getAccountFPT());
+            detailUserResponseStaff.setEmailFE(staff.getAccountFE());
             detailUserResponseStaff.setPicture(staff.getAvatar());
             return detailUserResponseStaff;
         } catch (Exception e) {
